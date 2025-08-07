@@ -3,7 +3,7 @@ date: '2025-08-03T00:00:00+00:00'
 lastmod: '2025-08-03T00:00:00+03:00'
 author: Isaac
 layout: post
-title: "How to Monitor Flea Levels with a Trap (A Strategic Guide)"
+title: "How to Monitor Flea Levels with a Trap - A Guide"
 categories:
 - Fleas
 - Guides

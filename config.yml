@@ -1,28 +1,119 @@
-baseURL: 'https://pestpolicy.com/'
-languageCode: 'en-us'
-title: 'Pest Policy'
-theme: "PaperModX"  # This points to the local folder
+# --- Basic Site Configuration (Edit these for Pest Policy) ---
 
-# Add this block to your config.yml
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
+baseURL: 'https://pestpolicy.com/' # The base URL for your deployed website.
 
-enableRobotsTXT: true
+languageCode: 'en-us'              # Your language code
+title: 'Home'                      # Your website's title
+theme: "PaperModX"                 # Make sure this is "PaperModX"
 enableGitInfo: false
-buildFuture: true
 
+# Enable generation of robots.txt for search engine instructions
+enableRobotsTXT: true
+
+# Enable sitemap generation - CRITICAL for indexing!
+enableGitInfo: true # Helps with lastmod for sitemap
+buildFuture: true # Ensure future-dated content is built (useful for scheduling)
+
+# --- Hugo Build Settings for Error Checking (NEW SECTION) ---
+build:
+  failOnMissingRefs: true # This will make Hugo error out if ref/relref shortcodes point to non-existent pages
+
+permalinks:
+  posts: "/:slug/"                  # Permalink structure for your articles
+
+# --- Homepage Info / Banner Configuration (theme-specific) ---
+
+homeInfoParams:
+  Title: "Welcome to Pest Policy: Your Home Improvement Hub" # Stronger call to action/value proposition
+  Content: | # Use multiline string for richer content with Markdown
+    Tackle pests, perfect your paint, and find the best running and walking shoes for a **truly great home** experience. Dive into our expert **DIY guides**, insightful **product reviews**, and proven **pest control solutions**.
+
+    Ready to transform your living space?
+
+    - Discover [Pest Control Strategies](/categories/pest-control-strategies/)
+    - Explore [Paint & Sprayer Reviews](/categories/paint-and-sprayers/)
+    - Find Your Perfect [Running & Walking Shoes](/categories/running-walking-shoes/)
+
+  # Example buttons (uncomment and edit if needed)
+  # buttons:
+  #   - name: "Explore Articles"
+  #     url: "/posts/"
+  #   - name: "About Us"
+  #     url: "/about/"
+
+# --- Theme-Specific Parameters (PaperModX) ---
 params:
-  description: "Pest Policy offers comprehensive DIY guides, expert product reviews, and actionable solutions for pest control, home painting, and choosing the best running & walking shoes."
+  mainSections: ["posts"]
+
+  env: "production" # Keep as "production" for live site builds
+
+  # Site Metadata for SEO
+  description: "Pest Policy: Your guide for DIY pest control, home painting, and finding the best running & walking shoes. Expert reviews & actionable solutions for a healthy home."
+  keywords:
+    - pest control
+    - pest solutions
+    - home pest removal
+    - DIY pest control
+    - organic pest control
+    - pest prevention tips
+    - residential pest management
+    - spray painting techniques
+    - interior paint
+    - exterior paint
+    - paint sprayers reviews
+    - best running shoes
+    - best walking shoes
+    - athletic footwear reviews
+    - home improvement projects
+    - home renovation tips
+    - DIY guides
+    - product reviews
+    - home maintenance
+    - healthy home living
+    - comfortable living
+
   author: "Isaac"
-  defaultTheme: "light"
+
+  DateFormat: "January 2, 2006" # Format for dates
+
+  defaultTheme: "light"          # Options: "light", "dark", or "auto"
+  # disableThemeToggle: true     # Uncomment to disable theme toggle
+
+  # Feature toggles
   ShowShareButtons: true
+  #ShowReadingTime: true
   ShowPostNavLinks: true
-  homeInfoParams:
-    Title: "Welcome to Pest Policy: Your Home Improvement Hub"
-    Content: |
-      Tackle pests, perfect your paint, and find the best running and walking shoes for a truly great home experience. Dive into our expert DIY guides, insightful product reviews, and proven pest control solutions.
+  ShowRssButtonLeafBundle: false
+  InstantClick: true # Speeds up page navigation (PapermodX specific)
+  #ShowToc: true # Global toggle for Table of Contents
+  TocSide: "right" # "left" or "right" for floating ToC
+
+  # Profile Mode (optional homepage style)
+  # profileMode:
+  #   enabled: false
+  #   title: "Home Improvement"
+  #   subtitle: "Your journey to Home Improvement."
+  #   imageUrl: "path/to/your/profile/image.jpg"
+  #   imageZoom: false
+  #   imageCircleIcons: true
+  #   imageWidth: 125
+  #   imageHeight: 125
+  #   buttons:
+  #     - name: "Articles"
+  #       url: "/posts/"
+  #     - name: "About"
+  #       url: "/about/"
+
+# --- Social Icons (optional) ---
+socialIcons:
+  - name: "facebook"
+    url: "https://web.facebook.com/profile.php?id=100067009801389"
+  - name: "twitter" # Renamed from "github" and URL updated for X (formerly Twitter)
+    url: "https://x.com/pestpolicy"
+  - name: "youtube" # Renamed from "github" and URL updated for X (formerly Twitter)
+    url: "https://www.youtube.com/@pestpolicy4519"
+
+# --- Site Menu Configuration ---
 
 menu:
   main:
@@ -30,7 +121,49 @@ menu:
       name: "Blog"
       url: "/posts/"
       weight: 20
-    - identifier: "contact"
-      name: "Contact"
-      url: "/contact/"
-      weight: 50
+
+    - identifier: "contact" # A unique identifier for this menu item
+      name: "Contact"        # The text displayed in the menu
+      url: "/contact/"       # The URL of your contact page
+      weight: 50             # Adjust weight to control order (higher weight = further right)
+
+# --- Optional Advanced Config Sections (commented) ---
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  page: ["HTML"] # AMP removed here 77
+  section: ["HTML", "RSS"]
+  taxonomy: ["HTML", "RSS"]
+  term: ["HTML", "RSS"]
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+  series: "series" # Useful for grouping related content, e.g., "Pest Control 101 Series"
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows raw HTML in markdown, use with caution
+
+# markup:
+#   tableOfContents:
+#     startLevel: 2
+#     endLevel: 3
+#     ordered: true
+
+sitemap:
+  changefreq: "weekly" # How often your content is typically updated (adjust as needed)
+  priority: 0.7 # Higher priority for frequently updated/important content (homepage, new posts)
+  filename: "sitemap.xml" # Standard sitemap name
+
+# privacy:
+#   # Customize privacy settings here
+
+# services:
+#   googleAnalytics:
+#     enable: true
+#     id: "UA-XXXXXXXXX-X"
+
+# --- End of config.yaml ---
