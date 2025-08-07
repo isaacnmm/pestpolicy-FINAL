@@ -43,7 +43,7 @@ homeInfoParams:
 
 # --- Theme-Specific Parameters (PaperModX) ---
 params:
-  mainSections: ["posts"]
+  # mainSections: ["posts"]
 
   env: "production" # Keep as "production" for live site builds
 
