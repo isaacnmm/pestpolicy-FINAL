@@ -6,7 +6,27 @@
     <description>Recent content in Categories on Pest Policy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Aug 2025 00:00:00 +0300</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fleas</title>
+      <link>http://localhost:1313/categories/fleas/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/fleas/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Guides</title>
+      <link>http://localhost:1313/categories/guides/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/guides/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Guide</title>
       <link>http://localhost:1313/categories/guide/</link>
@@ -48,31 +68,11 @@
     </item>
     
     <item>
-      <title>Fleas</title>
-      <link>http://localhost:1313/categories/fleas/</link>
-      <pubDate>Sun, 03 Aug 2025 00:00:00 +0300</pubDate>
-      
-      <guid>http://localhost:1313/categories/fleas/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Product Reviews</title>
       <link>http://localhost:1313/categories/product-reviews/</link>
       <pubDate>Sun, 03 Aug 2025 00:00:00 +0300</pubDate>
       
       <guid>http://localhost:1313/categories/product-reviews/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Guides</title>
-      <link>http://localhost:1313/categories/guides/</link>
-      <pubDate>Fri, 01 Aug 2025 00:00:00 +0300</pubDate>
-      
-      <guid>http://localhost:1313/categories/guides/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
