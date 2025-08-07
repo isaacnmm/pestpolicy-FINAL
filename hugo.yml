@@ -1,30 +1,34 @@
-# --- Basic Site Configuration (Edit these for Pest Policy) ---
+# --- ======================================================= ---
+# --- hugo.yml Configuration for https://pestpolicy.com/      ---
+# --- ======================================================= ---
 
-baseURL: 'https://pestpolicy.com/' # The base URL for your deployed website.
+# --- Basic Site Configuration ---
+baseURL: 'https://pestpolicy.com/'
+languageCode: 'en-us'
+title: 'Pest Policy'
+theme: "PaperModX"
 
-languageCode: 'en-us'              # Your language code
-title: 'Pest Policy'                      # Your website's title
-theme: "PaperModX"                 # Make sure this is "PaperModX"
-
-# Enable generation of robots.txt for search engine instructions
+# --- Build & Output Settings ---
 enableRobotsTXT: true
+enableGitInfo: true # Helps with lastmod for sitemap accuracy
+buildFuture: true   # Allows you to write posts with future dates for scheduling
 
-# Enable sitemap generation - CRITICAL for indexing!
-enableGitInfo: true # Helps with lastmod for sitemap
-buildFuture: true # Ensure future-dated content is built (useful for scheduling)
-
-# --- Hugo Build Settings for Error Checking (NEW SECTION) ---
+# This will make the build fail if you have a broken link in a shortcode,
+# which is great for catching errors before deployment.
 build:
-  failOnMissingRefs: true # This will make Hugo error out if ref/relref shortcodes point to non-existent pages
+  failOnMissingRefs: true
 
+# --- URL Structure ---
+# This makes your posts have clean URLs like pestpolicy.com/my-post/
 permalinks:
-  posts: "/:slug/"                  # Permalink structure for your articles
+  posts: "/:slug/"
 
-# --- Homepage Info / Banner Configuration (theme-specific) ---
-
+# --- Homepage Configuration (PaperModX Theme) ---
+# This section creates your custom static homepage.
+# It is used INSTEAD of a content/_index.md file for the homepage.
 homeInfoParams:
-  Title: "Welcome to Pest Policy: Your Home Improvement Hub" # Stronger call to action/value proposition
-  Content: | # Use multiline string for richer content with Markdown
+  Title: "Welcome to Pest Policy: Your Home Improvement Hub"
+  Content: | # The '|' allows for multi-line content with Markdown.
     Tackle pests, perfect your paint, and find the best running and walking shoes for a **truly great home** experience. Dive into our expert **DIY guides**, insightful **product reviews**, and proven **pest control solutions**.
 
     Ready to transform your living space?
@@ -33,136 +37,77 @@ homeInfoParams:
     - Explore [Paint & Sprayer Reviews](/categories/paint-and-sprayers/)
     - Find Your Perfect [Running & Walking Shoes](/categories/running-walking-shoes/)
 
-  # Example buttons (uncomment and edit if needed)
-  # buttons:
-  #   - name: "Explore Articles"
-  #     url: "/posts/"
-  #   - name: "About Us"
-  #     url: "/about/"
-
-# --- Theme-Specific Parameters (PaperModX) ---
+# --- Theme & Site-wide Parameters (params) ---
 params:
-  # mainSections: ["posts"]
+  # NOTE: mainSections is commented out on purpose.
+  # Defining it would override your custom homepage above.
 
-  env: "production" # Keep as "production" for live site builds
+  env: "production" # Keep as "production" for deployment
 
-  # Site Metadata for SEO
+  # --- SEO and Metadata ---
+  author: "Isaac"
   description: "Pest Policy: Your guide for DIY pest control, home painting, and finding the best running & walking shoes. Expert reviews & actionable solutions for a healthy home."
   keywords:
     - pest control
-    - pest solutions
-    - home pest removal
-    - DIY pest control
-    - organic pest control
-    - pest prevention tips
-    - residential pest management
-    - spray painting techniques
-    - interior paint
-    - exterior paint
-    - paint sprayers reviews
-    - best running shoes
-    - best walking shoes
-    - athletic footwear reviews
-    - home improvement projects
-    - home renovation tips
+    - home improvement
     - DIY guides
     - product reviews
-    - home maintenance
-    - healthy home living
-    - comfortable living
+    - paint sprayers
+    - running shoes
+    - walking shoes
+    # Add more relevant keywords as needed
 
-  author: "Isaac"
-
-  DateFormat: "January 2, 2006" # Format for dates
-
-  defaultTheme: "light"          # Options: "light", "dark", or "auto"
-  # disableThemeToggle: true     # Uncomment to disable theme toggle
-
-  # Feature toggles
+  # --- Theme Features & Appearance ---
+  DateFormat: "January 2, 2006"
+  defaultTheme: "light" # Options: "light", "dark", "auto"
+  
   ShowShareButtons: true
-  #ShowReadingTime: true
   ShowPostNavLinks: true
-  ShowRssButtonLeafBundle: false
-  InstantClick: true # Speeds up page navigation (PapermodX specific)
-  #ShowToc: true # Global toggle for Table of Contents
-  TocSide: "right" # "left" or "right" for floating ToC
+  InstantClick: true # Theme-specific feature for faster navigation
 
-  # Profile Mode (optional homepage style)
-  # profileMode:
-  #   enabled: false
-  #   title: "Home Improvement"
-  #   subtitle: "Your journey to Home Improvement."
-  #   imageUrl: "path/to/your/profile/image.jpg"
-  #   imageZoom: false
-  #   imageCircleIcons: true
-  #   imageWidth: 125
-  #   imageHeight: 125
-  #   buttons:
-  #     - name: "Articles"
-  #       url: "/posts/"
-  #     - name: "About"
-  #       url: "/about/"
-
-# --- Social Icons (optional) ---
+# --- Social Media Icons ---
 socialIcons:
   - name: "facebook"
     url: "https://web.facebook.com/profile.php?id=100067009801389"
-  - name: "twitter" # Renamed from "github" and URL updated for X (formerly Twitter)
+  - name: "twitter"
     url: "https://x.com/pestpolicy"
-  - name: "youtube" # Renamed from "github" and URL updated for X (formerly Twitter)
+  - name: "youtube"
     url: "https://www.youtube.com/@pestpolicy4519"
 
-# --- Site Menu Configuration ---
-
+# --- Main Navigation Menu ---
 menu:
   main:
     - identifier: "blog"
       name: "Blog"
-      url: "/posts/"
+      url: "/posts/"  # This is the page that will list all your articles
+      weight: 10
+    - identifier: "contact"
+      name: "Contact"
+      url: "/contact/"
       weight: 20
 
-    - identifier: "contact" # A unique identifier for this menu item
-      name: "Contact"        # The text displayed in the menu
-      url: "/contact/"       # The URL of your contact page
-      weight: 50             # Adjust weight to control order (higher weight = further right)
+# --- Advanced Settings ---
 
-# --- Optional Advanced Config Sections (commented) ---
-
+# Defines the kinds of pages Hugo will build for different content types.
 outputs:
-  home: ["HTML", "RSS", "JSON"]
-  page: ["HTML"] # AMP removed here 77
+  home: ["HTML", "RSS", "JSON"] # JSON is useful for search features
   section: ["HTML", "RSS"]
-  taxonomy: ["HTML", "RSS"]
-  term: ["HTML", "RSS"]
 
+# Defines the content classifications you use.
 taxonomies:
   category: "categories"
   tag: "tags"
-  series: "series" # Useful for grouping related content, e.g., "Pest Control 101 Series"
+  series: "series"
 
-
+# Configures Hugo's Markdown renderer.
 markup:
   goldmark:
     renderer:
-      unsafe: true # Allows raw HTML in markdown, use with caution
+      # This is CRITICAL for your old content that contains raw HTML links.
+      unsafe: true
 
-# markup:
-#   tableOfContents:
-#     startLevel: 2
-#     endLevel: 3
-#     ordered: true
-
+# Sitemap settings for search engines.
 sitemap:
-  changefreq: "weekly" # How often your content is typically updated (adjust as needed)
-  priority: 0.7 # Higher priority for frequently updated/important content (homepage, new posts)
-  filename: "sitemap.xml" # Standard sitemap name
-
-# privacy:
-#   # Customize privacy settings here
-
-# services:
-#   googleAnalytics:
-#     enable: true
-#     id: "UA-XXXXXXXXX-X"
-
-# --- End of config.yaml ---
+  changefreq: "weekly"
+  priority: 0.7
+  filename: "sitemap.xml"
