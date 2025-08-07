@@ -1,0 +1,36 @@
+baseURL: 'https://pestpolicy.com/'
+languageCode: 'en-us'
+title: 'Pest Policy'
+theme: "PaperModX"  # This points to the local folder
+
+# Add this block to your config.yml
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+enableRobotsTXT: true
+enableGitInfo: false
+buildFuture: true
+
+params:
+  description: "Pest Policy offers comprehensive DIY guides, expert product reviews, and actionable solutions for pest control, home painting, and choosing the best running & walking shoes."
+  author: "Isaac"
+  defaultTheme: "light"
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  homeInfoParams:
+    Title: "Welcome to Pest Policy: Your Home Improvement Hub"
+    Content: |
+      Tackle pests, perfect your paint, and find the best running and walking shoes for a truly great home experience. Dive into our expert DIY guides, insightful product reviews, and proven pest control solutions.
+
+menu:
+  main:
+    - identifier: "blog"
+      name: "Blog"
+      url: "/posts/"
+      weight: 20
+    - identifier: "contact"
+      name: "Contact"
+      url: "/contact/"
+      weight: 50

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+    </head>
+<body>
+    {{ block "main" . }}
+        {{ .Content }}
+    {{ end }}
+
+    {{ partial "footer.html" . }}
+    {{ partial "amazon_onelink.html" . }} </body>
+</html>

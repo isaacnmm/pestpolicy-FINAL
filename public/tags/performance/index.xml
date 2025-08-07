@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Performance on Pest Policy</title>
+    <link>http://localhost:1313/tags/performance/</link>
+    <description>Recent content in Performance on Pest Policy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi 3 B Review</title>
+      <link>http://localhost:1313/posts/raspberry-pi-3-b-review/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/raspberry-pi-3-b-review/</guid>
+      <description>There is so much fun in DIY Raspberry Pi projects, such as security cameras and digital weather stations.</description>
+      <content:encoded><![CDATA[<p>There is so much fun in DIY Raspberry Pi projects, such as security cameras and digital weather stations.</p>
+<ul>
+<li><a href="https://www.raspberrypi.org/products/%5Braspberry-pi-3%5D(/posts/best-heatsink-for-raspberry-pi-3/)-model-b-plus/">Raspberry Pi model 3 B+</a>is the newest upgrade, being more flexible and powerful, but still low priced. I recently run a test for the[micro-SD card for <a href="/posts/best-os-for-raspberry-pi-3/">Raspberry</a> Pi 3](<a href="https://pestpolicy.com/best-sd-card-for-raspberry-pi-3/)">https://pestpolicy.com/best-sd-card-for-raspberry-pi-3/)</a>.
+The upgrade brings superior WiFi performance, wired LAN performance, CPU frequency (200MHz faster), and other significant modifications but still maintained the 1GB memory.
+Below are the first impressions and benchmarks after a brief but thorough experience with the new Raspberry Pi model 3 B+. Read Also:
+Raspberry Pi 3 vs. two vs. Zero
+.</li>
+</ul>
+<h2 id="raspberry-pi-3-b-review--performance">Raspberry Pi 3 B Review + Performance</h2>
+<h3 id="hardware">Hardware</h3>
+<p>Pi 3 Model 3 B+ has two key features that stand out compared to earlier Pi models: a metal shield that covers the Bluetooth and WiFi circuitry (assist in RF emissions containment) and the SoC&rsquo;s metal cover (for dissipating heat).
+<em>But, what are the favorable hardware modifications?�</em></p>
+<ul>
+<li>Model 3 B+�comes with a push or pull MicroSD card slot as opposed to the earlier push-to-eject.</li>
+<li>It comes with a premium-looking Pi logo that is engaged on its wireless cover. Previous models had the symbol being etched on their circuit board, which looked low-class. Further, the Broadcom SoC has a beautiful metal cover.</li>
+<li>Model 3 B+ has a metal enclosure CPU build that dissipates heat well than the plastic covering on the earlier models: without additional active cooling or heatsink.</li>
+<li>Further, it has a highly standardized board layout and forms factor
+The critical hardware improvements that could do in the future include:</li>
+<li>Improve the I/O, such as incorporating USB 3.0. ports in place of the current USB 2.0.
+Read Also:
+Power Supply for Raspberry Pi 3</li>
+</ul>
+<h3 id="networking">Networking</h3>
+<p>On-board LAN was a critical aspect of the Raspberry Pi Model 3 that required a significant overhaul.
+The model 3 B+ now has the 10/100/1000 Gigabit LAN controller as opposed to just the 10/100 controller. Therefore, the in-build port will not be capped at 100 Mbps (practically ~93 Mbps). Model 3 B+ will thus give you more bandwidth, and you won&rsquo;t need gigabyte networking like before.
+Due to the improved Raspbian OS and the Pi 3 B+&rsquo;s better power, the initial impression with the B+ is excellent.
+The test results showed an improvement in the processing power, such as fast USB data transfer and better benchmarks performance.
+Its CPU has a heat spreader at its top, and thus the processor won&rsquo;t throttle its performance. However, the wireless and wired benchmark test showed no significant difference from the previous Pi 3 that has inferior features.</p>
+<h3 id="exposed-circuits-design"><strong>Exposed Circuits design</strong></h3>
+<p>My first impression of the Raspberry Pi 3B+ is an excellent-looking circuit board that measures 0.63<em>3.5</em>2.2 in.</p>
+<ul>
+<li>Notably, all the components are visible: 40-pin GPIO input/output connector and the 1.4GHz ARM processor.
+Also, the board includes a micro-SD slot, 3.5mm audio output, HDMI, Ethernet, four USB 2.0, and a micro-USB connector.
+Read Also:
+<a href="https://pestpolicy.com/how-to-build-a-raspberry-pi-retro-game-console/">Build a Raspberry Pi Retro Game Console</a>
+<strong>Amazing Speed Boost</strong>
+Just like Raspberry Pi 3 Model B, the all-new Model B+ has a 64-bit processor and in-built wireless connectivity.</li>
+<li>Despite not having not many additional features, the Model B+ has some unique tasks that will be completed much more comfortably.</li>
+<li>For example, with the processor upgrade that allows faster speeds, it&rsquo;ll be easier to complete tasks that require enormous computing power, such as creating a home-theatre PC.
+Further, despite having the same 1GB memory, the Model B+ comes with a 200MHz faster CPU.
+On the negative side, however, Pi 3 Model B+ could not effectively play the YouTube 1080p video. However, you may install VLC through different apps or command lines to play SDcard-loaded HD video.
+PROS</li>
+<li>Superior networking and faster processor</li>
+<li>Highly customizable and easy to install
+CONS</li>
+<li>Ethernet port won&rsquo;t attain the 1Gbps top speed described.
+I used benchmarks from the browser to assess the significance of the 200MHz CPU speed increase.</li>
+<li>First, I used the JavaScript Sunspider 1.0.2, and it took 1.92 seconds. Notably, the above is double the speed of the Raspberry Pi 3 Model B that takes 2.77 secs.
+Read Also: Heatsink
+<a href="https://pestpolicy.com/best-heatsink-for-raspberry-pi-3/">for Raspberry Pi 3</a></li>
+</ul>
+<h3 id="requires-some-add-ons"><strong>Requires some Add-Ons</strong></h3>
+<p>If you are utilizing the Raspberry Pi in complex projects, you must add components such as a Pi case, fans, and heat sinks.</p>
+<ul>
+<li>To create an excellent first computer, you&rsquo;ll need a case that has top ports&rsquo; cut-outs, and that will be easy to dismantle whenever required.</li>
+<li>Also, you can include a PoE hat adapter to power up the Raspberry Pi through the Ethernet cable-supplied power, mainly when used with motion detectors.
+Model B+&rsquo;s Ethernet port will allow the gigabit transfer speeds with speeds going up to 315Mbps. Your WiFi radio will do superior in Model B+&rsquo;s 5GHz band.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

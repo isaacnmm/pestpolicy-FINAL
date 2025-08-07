@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Thermal on Pest Policy</title>
+    <link>http://localhost:1313/tags/thermal/</link>
+    <description>Recent content in Thermal on Pest Policy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/thermal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Way to Apply Thermal Paste to Cpu</title>
+      <link>http://localhost:1313/posts/best-way-to-apply-thermal-paste-to-cpu/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/best-way-to-apply-thermal-paste-to-cpu/</guid>
+      <description>The right choice of thermal paste is critical for optimal CPU temperatures.</description>
+      <content:encoded><![CDATA[<p>The right choice of thermal paste is critical for optimal CPU temperatures.</p>
+<ul>
+<li>But, the thermal paste application leads to different outcomes, which could include damage to your CPU and motherboard.</li>
+<li>Therefore, in this article, I discuss the best way to apply thermal paste to the CPU.
+Youll need to apply the Thermal Interface Material (thermal paste) either when upgrading your CPU or building a new PC.
+But why so? The thermal paste helps in heat dissipation from the PC heat sink and the CPU die. I would recommend the
+<a href="https://www.amazon.com/dp/B0087X728K/?tag=p-policy-20">Arctic Silver 5 AS5-3.5G Thermal Paste</a>
+on Amazon and I will be using it in this case study.</li>
+</ul>
+<p>Notably, I recently upgraded the
+<a href="https://pestpolicy.com/best-motherboard-i5-6600k-cpu/">motherboard for my i5 6600k CPU</a>
+and thus I expect optimal gaming experience: Wolfenstein II: The New Colossus, Observer, and Call of Duty: WWII.</p>
+<p>Before conducting extensive research and test on thermal paste application, maybe like you, I only overhead of Rice, X, Pea, Straight-line application methods. This left me confused with the many opinions out there.
+<strong>In summary:�</strong>
+**However, if you need a straight answer: The best method to apply the thermal paste on your gaming CPU is the pea-sized dot&rsquo; technique. **
+**In this method, you will apply a pea-sized - not too much - amount of the thermal compound in the middle of the CPUs surface and screw back the heat sink on top of it. **
+**Therefore, the thermal paste will spread naturally in a round or oval shape evenly over the CPU cores. Manually spreading would lead to the formation of air bubbles. **</p>
+<h2 id="how-important-is-thermal-paste-to-your-cpu">How important is thermal paste to your CPU?</h2>
+<p>So, do you really need the grey weird-smelling paste on your CPU? Why bother using the paste when the heatsinks already look very impressive?</p>
+<p>Well, heres why: most heat sinks will not sit flat on the CPU since they could be concave or convex and thus leave some space where the processor and the heat sink will not have adequate contact.</p>
+<p>Also, despite that the heat sink and the CPU would be lying flat on each other, their surfaces could be rough at the microscopic level and thus will not sit totally flat on each other, which would leave air pockets between the two surfaces.</p>
+<ul>
+<li>Notably, the air is a poor conductor of heat and thus the air gaps will not allow the CPU and the heat sink to touch more directly.
+The thermal material is made from special conductive materials such as almost 100% pure micronized silver and Thermal conductance greater than 350 000W/m2, which conduct heat better up to the heatsink.
+<em>So, here is a very common question related to thermal paste: Can you use toothpaste as your thermal paste aiming to save money?</em>
+NO!</li>
+</ul>
+<p>Thermal paste, unlike toothpaste, is a heat-conducting material that contains some metals  or probably powdered silver in the expensive paste brands.</p>
+<p>However, do not worry since thermal paste like Arctic Silver 5 has higher-quality compounds that allow it to be non-conductive despite using metal but youll also need to keep it away from the metal contacts.</p>
+<p>High-quality ceramics can help in cooling and are cheaper, which makes them good for sub-zero cooling.</p>
+<p>However, you can also use silicone thermal pads that will sit fully between the CPU and the heat sink.</p>
+<h2 id="how-much-thermal-paste-should-you-apply">How much thermal paste should you apply?</h2>
+<p>Is there anything like too little or too much thermal paste application?</p>
+<p>Yes, applying too uneven or little thermal might make some of your CPU cores run hotter compared to the rest.
+**But; **
+If you apply uneven or too much thermal paste, you might see some gas bubbles in the space separating the heat sink and the CPU.
+<strong>Finally, onto our main discussion: Thermal Paste Application</strong></p>
+<h2 id="best-way-to-apply-thermal-paste-to-the-cpu">Best way to apply thermal paste to the CPU</h2>
+<p>First things first:</p>
+<p>You should know that the thermal compound application method can vary reliant on the kind of heat sink you are using.</p>
+<p>For example, the heat sink that is heat pipe-based could require a different application method of the thermal paste compared to the heat sink that utilizes the direct plate-based method.</p>
+<p>However, check the heat sink guide or manual since the vendors always test the setup and determine the method that achieves the optimum temperature.</p>
+<p>Despite that you could be tempted to purchase some better performing thermal paste, you should know that various pastes have different viscosities, compositions, and densities, factors that will affect how it is distributed.</p>
+<h3 id="application-process"><strong>Application process:</strong></h3>
+<p>The thermal compound will come in a syringe, which will be very suitable for the paste application process.</p>
+<p>Clean up the processor top to remove any dirt.</p>
+<ul>
+<li>You will apply paste that is pea-sized or the size of capacitors on your motherboard.</li>
+<li>However, ensure that you apply reasonable paste that will spread well on the CPU and heat sink to avoid direct contact with the metal parts.
+The rule of thumb is that is less thermal past is always better since too much of it would hinder the thermal cooling capability of the heat sink.</li>
+</ul>
+<p>Now: Check the video</p>
+<p><a href="https://www.youtube.com/watch?v=3OO2uJl1JvA">https://www.youtube.com/watch?v=3OO2uJl1JvA</a></p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

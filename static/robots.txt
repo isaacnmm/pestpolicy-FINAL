@@ -1,0 +1,15 @@
+﻿User-agent: *
+Disallow: /search/
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /css/
+Allow: /js/
+Allow: /
+
+Sitemap: /sitemap.xml
+
+User-agent: Googlebot
+# Specific Googlebot rules here
+
+User-agent: Bingbot
+# Specific Bingbot rules here

@@ -1,0 +1,37 @@
+{{/*
+  Get the parameters passed to the shortcode.
+*/}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | plainify }}
+{{ $description := .Get "description" | plainify }}
+
+{{/*
+  Try to find a matching image within the current page's resources.
+*/}}
+{{ $image := .Page.Resources.GetMatch $src }}
+
+{{/*
+  Check if the image was found.
+*/}}
+{{ with $image }}
+  <div class="pinnable-container" style="text-align: center; margin: 2rem 0;">
+    <figure>
+      {{/*
+        This <img> tag is now on its own.
+        The surrounding <a href="..."></a> link has been removed, so the image will no longer be clickable.
+      */}}
+      <img src="{{ .RelPermalink }}" alt="{{ $alt }}" style="max-width: 100%; height: auto; border-radius: 8px;">
+
+      {{ with $description }}
+        <figcaption style="font-size: 0.9em; color: #6c757d; margin-top: 0.5em;">{{ . }}</figcaption>
+      {{ end }}
+    </figure>
+  </div>
+{{ else }}
+  {{/*
+    Error message if the image is not found.
+  */}}
+  <div style="background-color: #ffcccc; border: 1px solid #ff0000; padding: 10px; margin: 1rem 0;">
+    <strong>Shortcode Error:</strong> Image '{{ $src }}' not found in Page Bundle for this post.
+  </div>
+{{ end }}

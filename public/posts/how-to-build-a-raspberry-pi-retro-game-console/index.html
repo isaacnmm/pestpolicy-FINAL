@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+ 
+<title>How to Build a Raspberry Pi Retro Game Console | Pest Policy</title>
+<meta name="keywords" content="
+   raspberry-pi-3, raspberry, retro">
+
+
+<meta name="description" content="It&#39;s no brainier that retro gamers have always desired to create their &#39;general game console,&#39; which would enable them to play games from various systems.">
+
+<meta name="author" content="Isaac">
+<link rel="canonical" href="http://localhost:1313/posts/how-to-build-a-raspberry-pi-retro-game-console/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.24117e94f7185554bf370e131546657a05d72834bf02c67c2a4215d5cf110a80.css" integrity="sha256-JBF&#43;lPcYVVS/Nw4TFUZlegXXKDS/AsZ8KkIV1c8RCoA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/how-to-build-a-raspberry-pi-retro-game-console/">
+
+ 
+<meta name="twitter:title" content="How to Build a Raspberry Pi Retro Game Console | Pest Policy" />
+
+
+<meta name="twitter:description" content="It&#39;s no brainier that retro gamers have always desired to create their &#39;general game console,&#39; which would enable them to play games from various systems." />
+<meta property="og:title" content="How to Build a Raspberry Pi Retro Game Console | Pest Policy" />
+<meta property="og:description" content="It&#39;s no brainier that retro gamers have always desired to create their &#39;general game console,&#39; which would enable them to play games from various systems." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/how-to-build-a-raspberry-pi-retro-game-console/" />
+<meta property="article:section" content="posts" />
+  <meta property="article:published_time" content="2025-07-10T00:00:00&#43;00:00" />
+  <meta property="article:modified_time" content="2025-07-10T00:00:00&#43;03:00" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How to Build a Raspberry Pi Retro Game Console",
+      "item": "http://localhost:1313/posts/how-to-build-a-raspberry-pi-retro-game-console/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Build a Raspberry Pi Retro Game Console | Pest Policy",
+  "name": "How to Build a Raspberry Pi Retro Game Console",
+  "description": "It's no brainier that retro gamers have always desired to create their 'general game console,' which would enable them to play games from various systems.",
+  "keywords": [
+    "raspberry-pi-3", "raspberry", "retro"
+  ],
+  "wordCount" : "977",
+  "inLanguage": "en",
+  "datePublished": "2025-07-10T00:00:00Z",
+  "dateModified": "2025-07-10T00:00:00+03:00",
+  "author":{
+    "@type": "Person",
+    "name": "Isaac"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/how-to-build-a-raspberry-pi-retro-game-console/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pest Policy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script><style>
+  #icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+  #icons .item {
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+  }
+  #icons .item .name {
+    font-size: 12px;
+    user-select: all;
+    text-align: center;
+  }
+  #icons .item .icon {
+    display: flex;
+    justify-content: center;
+  }
+  #icons .item svg {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+   
+</noscript>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7369419631229178"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class=" type-posts kind-page layout-post" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'light';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Pest Policy (Alt + H)">Pest Policy</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog" class="active"
+                >Blog
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact"
+                >Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main post">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">How to Build a Raspberry Pi Retro Game Console</h1>
+    <div class="post-description">It&#39;s no brainier that retro gamers have always desired to create their &#39;general game console,&#39; which would enable them to play games from various systems.</div>
+    <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
+  <span>July 10, 2025</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
+  <span class="post-tags"><a href="http://localhost:1313/tags/raspberry-pi-3/">Raspberry-Pi-3</a><a href="http://localhost:1313/tags/raspberry/">Raspberry</a><a href="http://localhost:1313/tags/retro/">Retro</a></span></span>
+
+      
+      
+    </div>
+  </header> 
+  <div class="post-content"><p>It&rsquo;s no brainier that retro gamers have always desired to create their &ldquo;general game console,&rdquo; which would enable them to play games from various systems.</p>
+<ul>
+<li>The critical considerations for this seemingly &ldquo;idea build&rdquo; have been excellent connectivity to the Television set, comfortable for gaming using aRetropie Controller, and average price.
+However, with the
+<a href="https://retropie.org.uk/">RetroPie</a>
+software and Raspberry Pi 3, the &ldquo;idea build&rdquo; is now achievable. You can now play many retro games in PlayStation, Game Boy, and the Super NES all at a low cost of building the emulation system.</li>
+</ul>
+<h2 id="how-to-build-a-raspberry-pi-retro-game-console">How to Build a Raspberry Pi Retro Game Console<a hidden class="anchor" aria-hidden="true" href="#how-to-build-a-raspberry-pi-retro-game-console">¶</a></h2>
+<h3 id="1-install-the-raspberry-pi-to-the-raspberry-case">1. Install the Raspberry Pi to the Raspberry case<a hidden class="anchor" aria-hidden="true" href="#1-install-the-raspberry-pi-to-the-raspberry-case">¶</a></h3>
+<p>Your Raspberry Pi will not come with a case unless you go for the bundled offer. However, to protect your Raspberry Pi, it is vital that you install a case for your Raspberry Pi.
+Factors to consider while selecting the Raspberry Pi case are design, easy access for your board, port access, and durability.
+Please choose a case that Raspberry Pi that has a heat sink. Notably, I will select the Raspberry Pi case that will not require screws and screwdriver to safeguard.</p>
+<h3 id="2-install-sd-card-image-for-retropie">2. Install SD-card image for RetroPie<a hidden class="anchor" aria-hidden="true" href="#2-install-sd-card-image-for-retropie">¶</a></h3>
+<p>RetroPie is a Raspberry Pi software bundle, combining projects such as
+<a href="http://www.emulationstation.org/">EmulationStation</a>
+and
+<a href="http://www.libretro.com/">RetroArch</a>
+, which is Raspbian created by Linux.
+Notably, you&rsquo;ll find it easy to start with RetroPie through an installation of the SD image that is a suitable system created over the Raspbian OS.
+RetroPie combines suite utilities and tools to make it easy to run ROMs for different old-fashioned gaming stages.�However, your Raspberry Pi will not have its internal hard drive, and thus you&rsquo;ll need to employ a microSD card to store the RetroPie files and operating system.
+Therefore, you&rsquo;ll require to
+<a href="https://retropie.org.uk/download/">download</a>
+the appropriate version of the SD-Card Image. However, note that you&rsquo;ll find two kinds of SD-Card Image:</p>
+<ul>
+<li>SD-Card Image for the Raspberry Pi 2 and 3</li>
+<li>SD-Card Image for your Raspberry Zero W, Pi Zero, B+, B, A, &amp; A+.</li>
+</ul>
+<h3 id="3-format-the-microsd-for-raspberry-pi-operations">3. Format the MicroSD for Raspberry Pi Operations<a hidden class="anchor" aria-hidden="true" href="#3-format-the-microsd-for-raspberry-pi-operations">¶</a></h3>
+<p>If your
+<a href="https://pestpolicy.com/best-sd-card-for-%5Braspberry-pi-3%5D(/posts/best-heatsink-for-raspberry-pi-3/)/">Raspberry Pi SD card</a>
+is above 32 GB, you&rsquo;ll need to
+format to�FAT32
+so that it can work with the retro games you&rsquo;ll install.�As I had outlined
+earlier
+, all SD cards bigger than 32GB will have the SDXC card, which is not compatible with NOOBS.
+Therefore, to use such as 64GB and above SD card in <a href="/posts/best-os-for-raspberry-pi-3/">Raspberry</a> Pi, you&rsquo;ll need to format the card to the exFAT filesystem.
+Notably, the default SD Formatter tool format the SD cards 64GB or bigger to exFAT. However, the bootloader that is inside the GPU is only compatible with the FAT system.
+For Windows, use the
+FAT32 Format
+that you can download and run on your PC to format your SD card to FAT32 ready for Raspberry Pi operations. For Mac OS and Linux, use the
+<a href="https://www.sdcard.org/downloads/formatter_4/">SD Formatter</a>
+plus the FAT32 Format�tools.</p>
+<h3 id="4-mac--installing-operating-system-images">4. Mac�- Installing operating system images<a hidden class="anchor" aria-hidden="true" href="#4-mac--installing-operating-system-images">¶</a></h3>
+<p>For Mac, you&rsquo;ll install the RetroPie image using the
+<a href="http://www.pibakery.org/download.html">ApplePi-Baker</a>
+tool.
+However, after downloading and installing the utility, you&rsquo;ll need SUDO access for writing and reading the
+Raspberry Pi SD card
+.</p>
+<ul>
+<li>Install and launch the SD card, after which you enter the Mac access.
+Once you found the
+<a href="http://www.pibakery.org/download.html">ApplePi-Baker</a>
+utility, you&rsquo;ll need to click, on the left side, your Raspberry Pi SD card. After this, hit the &ldquo;Restore Backup&rdquo; and then the Image (RetroPie SD-Card).</li>
+</ul>
+<h3 id="5-windows---installing-operating-system-images">5. Windows - Installing operating system images<a hidden class="anchor" aria-hidden="true" href="#5-windows---installing-operating-system-images">¶</a></h3>
+<p>For windows, you&rsquo;ll need to download the Win32DiskImager from the
+<a href="http://www.raspberrypi.org/downloads">resource page</a>
+.
+Therefore, insert the SD Card and run the Win32DiskImager.exe. From the running application, choose the desired #.img&rsquo; image file and hit the write button.</p>
+<h3 id="6-install-the-raspberry-pi-sd-card--peripherals-and-link-to-the-internet">6. Install the Raspberry Pi SD card &amp; peripherals and link to the internet<a hidden class="anchor" aria-hidden="true" href="#6-install-the-raspberry-pi-sd-card--peripherals-and-link-to-the-internet">¶</a></h3>
+<p>Your next step will require that you properly install the SD card to the Raspberry Pi slot. Also, install the HDMI cable, USB game controller, and keyboard.</p>
+<ul>
+<li>For the display, you can link your TV or monitor using an HDMI cable.
+Remember that you&rsquo;ll only switch on power to your Raspberry Pi after linking all the Pi peripherals. Therefore, finally, connect the
+<a href="https://pestpolicy.com/best-power-supply-raspberry-pi-3/">Raspberry Pi MicroUSB power supply</a>
+.
+To get game ROMs, you&rsquo;ll require to link the Raspberry Pi to the internet and find explanation scraping and gaming evaluation.�You can connect your Pi to the internet through:</li>
+</ul>
+<ol>
+<li>WiFi  RetroPie
+For the WiFi, you&rsquo;ll need to link all the Pi peripheral and then hit the RetroPie menu on the Raspberry Pi and hit WI-FI.</li>
+<li>WiFi  in-built
+If you have Wireless Pi Zero and Raspberry Pi 3, then you can connect to the internet through the in-built WiFi.</li>
+<li>WiFi dongle
+If none of the above WIFI options are available, then you can purchase a USB WiFi adapter that will allow you to link to the internet.</li>
+<li>Ethernet Cable�(CAT5)
+Notably, not all of us fancy the WIFI connection to the internet. Therefore, you can use the Ethernet (CAT5) cable to link your PI to the internet.</li>
+</ol>
+<h3 id="7-expand-the-sd-card-and-link-the-raspberry-pi">7. Expand the SD card and link the Raspberry Pi<a hidden class="anchor" aria-hidden="true" href="#7-expand-the-sd-card-and-link-the-raspberry-pi">¶</a></h3>
+<p>I must say that the SD card is now bigger than before.�Therefore, if you have an SD card that has a capacity of over 4GB, you&rsquo;ll need to expand it using
+<a href="https://elinux.org/RPi_raspi-config">raspi-config</a>
+by running the sudo raspi-config command line.
+After finishing the installation and expansion, reboot the Raspberry Pi.</p>
+<h3 id="8-connect-the-raspberry-pi">8. Connect the Raspberry Pi<a hidden class="anchor" aria-hidden="true" href="#8-connect-the-raspberry-pi">¶</a></h3>
+<p>To copy the game ROMs, you&rsquo;ll now link the Raspberry Pi with the PC, which will enable you to rework its configuration files readily.</p>
+<h3 id="9-set-up-controller-and-searchgame-roms">9. Set up controller and search�Game ROMs<a hidden class="anchor" aria-hidden="true" href="#9-set-up-controller-and-searchgame-roms">¶</a></h3>
+<p>For your
+retro game controller
+to function with the Raspberry Pi, you&rsquo;ll need to set up the USB controller.</p>
+<ul>
+<li>For your retro gaming, you&rsquo;ll need to visit<a href="MAMEdev.org">sites</a>that offer legal and priceless ROMs that you can download to your device.
+You can install the ROMs through a USB thumb drive or SFTP/ SSH or other
+<a href="https://github.com/retropie/retropie-setup/wiki">methods</a>
+.</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/how-to-build-a-beehive/">
+    <span class="title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;Prev Page</span>
+    <br>
+    <span>How to Build a Beehive</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/how-to-camp-out-in-your-backyard/">
+    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    </span>
+    <br>
+    <span>How to Camp Out in Your Backyard</span>
+  </a>
+</nav>
+
+  </footer>
+    <div class="comments-separator"></div>
+</article>
+    </main>
+    
+<footer class="footer">
+  <span style="display: inline-block; margin-left: 1em; font-size: 18px;">
+    We may earn a commission when you click and buy from Amazon.com.
+  <span style="display: inline-block; margin-left: 1em;">
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/js/medium-zoom.min.js" data-no-instant
+></script>
+
+
+
+
+<script>
+  
+  
+  (function() {
+    const enableTocScroll = '' == '1'
+    if (!enableTocScroll) {
+      return
+    }
+    if (!document.querySelector('.toc')) {
+      console.log('no toc found, ignore toc scroll')
+      return
+    }
+    
+
+    
+    const scrollListeners = window.scrollListeners
+    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
+    const activeClass = 'active';
+
+    
+    let activeHeading = headings[0];
+    getLinkByHeading(activeHeading).classList.add(activeClass);
+
+    const onScroll = () => {
+      const passedHeadings = [];
+      for (const h of headings) {
+        
+        if (getOffsetTop(h) < 5) {
+          passedHeadings.push(h)
+        } else {
+          break;
+        }
+      }
+      if (passedHeadings.length > 0) {
+        newActiveHeading = passedHeadings[passedHeadings.length - 1];
+      } else {
+        newActiveHeading = headings[0];
+      }
+      if (activeHeading != newActiveHeading) {
+        getLinkByHeading(activeHeading).classList.remove(activeClass);
+        activeHeading = newActiveHeading;
+        getLinkByHeading(activeHeading).classList.add(activeClass);
+      }
+    }
+
+    let timer = null;
+    const scrollListener = () => {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(onScroll, 50)
+    }
+    window.addEventListener('scroll', scrollListener, false);
+    scrollListeners.push(scrollListener)
+
+    function getLinkByHeading(heading) {
+      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      return document.querySelector(`.toc ul li a[href="#${id}"]`);
+    }
+
+    function getOffsetTop(heading) {
+      if (!heading.getClientRects().length) {
+        return 0;
+      }
+      let rect = heading.getBoundingClientRect();
+      return rect.top
+    }
+  })();
+  </script>
+
+</body>
+
+</html>
