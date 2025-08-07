@@ -3,9 +3,8 @@
 baseURL: 'https://pestpolicy.com/' # The base URL for your deployed website.
 
 languageCode: 'en-us'              # Your language code
-title: 'Home'                      # Your website's title
+title: 'Pest Policy'                      # Your website's title
 theme: "PaperModX"                 # Make sure this is "PaperModX"
-enableGitInfo: false
 
 # Enable generation of robots.txt for search engine instructions
 enableRobotsTXT: true
